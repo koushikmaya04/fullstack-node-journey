@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+}
+/* Container */
+body{
+    font-family: Arial, sans-serif;
+}
+
+.container{
+    width:500px;
+    background:#d3d3d3;
+    border:5px dashed red;   /* Makes the container boundary visible */
+    margin-bottom:50px;
+}
+
+
+.card{
+    width:100%;
+    padding:40px;
+    border:10px solid black;
+    background:orange;
+}
+/* Margin Collapse */
+
+.section{
+    margin-top:50px;
+    background:skyblue;
+}
+
+.section h2{
+    margin-top:60px;
+}
