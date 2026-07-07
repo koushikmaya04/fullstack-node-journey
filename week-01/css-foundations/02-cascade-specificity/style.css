@@ -1,0 +1,34 @@
+/* Rule 1 */
+p{
+    color:black;
+}
+
+/* Rule 2 */
+.text{
+    color:green;
+}
+
+/* Rule 3 */
+#para{
+    color:blue;
+}
+
+/* Rule 4 */
+.container p{
+    color:red;
+}
+
+/* Rule 5 */
+.container .text{
+    color:orange;
+}
+
+/* Rule 6 */
+.container #para{
+    color:purple;
+}
+
+/* Rule 7 */
+div p{
+    color:brown;
+}
