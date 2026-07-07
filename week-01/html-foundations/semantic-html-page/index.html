@@ -3,41 +3,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="A semantic HTML5 blog article demonstrating accessibility best practices.">
+    <title>Understanding Semantic HTML | Tech Blog</title>
 </head>
 <body>
+    <!-- Header -->
     <header>
-    <nav>
-        ...
-    </nav>
-</header>
+        <h1>Tech Insights</h1>
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="">Article</a></li>
+                <li><a href="">Related Articles</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Main Content -->
+    <div>
+        <!-- Blog Article -->
+        <article id="article">
+            <header>
+                <h2>Understanding Semantic HTML</h2>
+                <p>
+                    Written by <strong>Koushik Maya</strong>
+              <br>
+                    Published on <time >July 7, 2026</time>
+                </p>
+            </header>
+            <!-- Introduction -->
+            <section>
+                <h3>Introduction</h3>
+                <p>
+                    Semantic HTML uses meaningful elements to describe the purpose
+                    of content. It improves accessibility, SEO, and code readability.
+                </p>
+            </section>
+            <!-- Benefits -->
+            <section>
+                <h3>Benefits of Semantic HTML</h3>
+                <ul>
+                    <li>Improves accessibility</li>
+                    <li>Better SEO</li>
+                    <li>Cleaner code structure</li>
+                    <li>Easier maintenance</li>
+                </ul>
+            </section>
+            <!-- Example -->
+            <section>
+                <h3>Example Structure</h3>
+                <p>
+                    A semantic webpage typically contains the following landmarks:
+                </p>
 
-<main>
-    <article>
-        <header>
-            ...
-        </header>
+                <ol>
+                    <li>Header</li>
+                    <li>Navigation</li>
+                    <li>Main</li>
+                    <li>Article</li>
+                    <li>Aside</li>
+                    <li>Footer</li>
+                </ol>
 
-        <section>
-            ...
-        </section>
+                <figure>
 
-        <section>
-            ...
-        </section>
+                    <img
+                        src="assets/images/img.png"
+                        alt="Diagram showing the structure of a semantic HTML webpage"
+                        width="500">
 
-        <section>
-            ...
-        </section>
-    </article>
+                    <figcaption>
+                        Figure 1: Semantic HTML Layout
+                    </figcaption>
 
-    <aside>
-        ...
-    </aside>
-</main>
+                </figure>
 
-<footer>
-    ...
-</footer>
+            </section>
+
+            <!-- Code -->
+            <section>
+
+                <h3>Sample HTML Code</h3>
+
+                <pre>&lt;main&gt;
+    &lt;article&gt;
+        &lt;section&gt;
+            Content
+        &lt;/section&gt;
+    &lt;/article&gt;
+&lt;/main&gt;
+                </pre>
+
+            </section>
+             <section>
+
+                <h3>Expert Opinion</h3>
+                    Semantic HTML gives meaning to web content and makes websites
+                    easier for users and assistive technologies to understand.
+            </section>
+        </article>
+        <!-- Aside -->
+        <aside id="related">
+            <h2>Related Articles</h2>
+            <ul>
+                <li><a href="https://www.w3schools.com/html/html_forms.asp" target="_blank">HTML Forms</a></li>
+                <li><a href="https://www.w3schools.com/html/html_accessibility.asp" target="_blank">Accessibility Basics</a></li>
+                <li><a href="https://www.geeksforgeeks.org/techtips/search-engine-optimization-seo-basics/" target="_blank">SEO Fundamentals</a></li>
+            </ul>
+        </aside>
+     <!-- Contact Form -->
+<section id="contact">
+
+    <h2>Contact the Author</h2>
+
+    <form action="#" method="post">
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <br><br>
+
+        <label for="email">  Email:   </label>
+        <input type="email" id="email" name="email" required>
+
+        <br><br>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message"></textarea>
+
+        <br><br>
+
+        <button type="submit">Send Message</button>
+
+    </form>
+
+</section>
+</div>
+
+    <!-- Footer -->
+    <footer>
+        <address> 
+            
+            Contact:
+            <a href="mailto:koushik@example.com">
+                koushik@gmail.com
+            </a>
+        </address>
+
+    </footer>
+
 </body>
 </html>
