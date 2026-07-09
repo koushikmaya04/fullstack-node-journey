@@ -7,7 +7,7 @@
 }
 .container {
     display: flex;
-    height: 400px;
+    height: 100vh;
 }
 .item {
     display:flex;

@@ -9,7 +9,7 @@ header {
 .left{
     
     float: left;
-    height:400px ;
+    height:900px ;
     width:10%;
       background-color: lightcoral;
       text-align: center;
@@ -20,14 +20,14 @@ section {
     float: left;
 
     width: 80%;
-    height: 400px;
+    height: 900px;
     background-color: gold;
     text-align: center;
     line-height: 200px;
 }
 .right{
     float: left;
-    height:400px ;
+    height:900px ;
     width:10%;
       background-color: lightcoral;
       text-align: center;
