@@ -4,18 +4,18 @@
     display:flex;
     justify-content:center;
     align-items:center;
-    font-size:60px;
+    font-size:30px;
 }
 .container {
     display: flex;
     font-size:60px;
-    height: 100vh;
+    height: 400px;
 }
 .item {
     display:flex;
     justify-content:center;
     align-items:center;
-    font-size:60px;
+    font-size:30px;
 }
 .item1 {
     width:10%;
@@ -35,5 +35,5 @@
     display:flex;
     justify-content:center;
     align-items:center;
-    font-size:60px;
+    font-size:30px;
 }

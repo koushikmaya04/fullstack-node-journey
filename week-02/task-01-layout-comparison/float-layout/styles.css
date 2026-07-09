@@ -3,39 +3,39 @@ header {
     background-color: orange;
     text-align: center;
      line-height: 40px;
-     font-size:40px;
+     font-size:20px;
 
 }
 
 .left{
     
     float: left;
-    height:900px ;
+    height:600px ;
     width:10%;
       background-color: lightcoral;
       text-align: center;
       line-height: 200px;
-      font-size:40px;
+      font-size:20px;
 }
 section {
    
     float: left;
 
     width: 80%;
-    height: 900px;
+    height: 600px;
     background-color: gold;
     text-align: center;
     line-height: 200px;
-    font-size:40px;
+    font-size:20px;
 }
 .right{
     float: left;
-    height:900px ;
+    height:600px ;
     width:10%;
       background-color: lightcoral;
       text-align: center;
       line-height: 200px;
-      font-size:40px;
+      font-size:20px;
 }
 footer {
 
@@ -45,5 +45,5 @@ footer {
     background-color: orange;
     text-align: center;
     line-height: 40px;
-    font-size:40px;
+    font-size:20px;
 }

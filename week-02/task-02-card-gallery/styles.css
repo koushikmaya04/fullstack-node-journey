@@ -21,7 +21,7 @@
 
 .gallary{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(1300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 25px;
     padding: 25px;
 }
@@ -29,7 +29,7 @@
 
 .item{
     width:100%;
-    height:800px;
+    height:400px;
     object-fit:cover;
     border-radius:20px;
 
