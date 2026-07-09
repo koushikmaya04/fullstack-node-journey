@@ -1,0 +1,44 @@
+header {
+    height: 80px;
+    background-color: orange;
+    text-align: center;
+     line-height: 40px
+
+}
+
+.left{
+    
+    float: left;
+    height:400px ;
+    width:10%;
+      background-color: lightcoral;
+      text-align: center;
+      line-height: 200px;
+}
+section {
+   
+    float: left;
+
+    width: 80%;
+    height: 400px;
+    background-color: gold;
+    text-align: center;
+    line-height: 200px;
+}
+.right{
+    float: left;
+    height:400px ;
+    width:10%;
+      background-color: lightcoral;
+      text-align: center;
+      line-height: 200px;
+}
+footer {
+
+    height: 80px;
+    width: 100%;
+       clear: both;
+    background-color: orange;
+    text-align: center;
+    line-height: 40px
+}
