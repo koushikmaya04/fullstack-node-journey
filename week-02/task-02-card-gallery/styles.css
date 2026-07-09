@@ -1,0 +1,43 @@
+/* *{
+margin:0px;
+padding:0px;
+box-sizing: border-box;
+}
+.gallary{
+    display: grid;
+    height:100vh;
+    width: 100%; 
+     grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+   grid-auto-rows:250px;
+    gap:15px;
+}
+.item{
+    overflow: hidden;
+}
+.item img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+} */
+
+
+
+.gallary{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(1300px, 1fr));
+    gap: 25px;
+    padding: 25px;
+}
+
+
+.item{
+    width:100%;
+    height:800px;
+    object-fit:cover;
+    border-radius:20px;
+
+}
+body{
+    background-color:black;
+}
