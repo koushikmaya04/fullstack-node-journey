@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Semantic HTML5 Blog">
+    <title>Understanding Semantic HTML</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header__container">
+            <h1 class="header__logo">
+                Tech Insights
+            </h1>
+            <nav class="header__nav">
+                <ul class="header__list">
+                    <li class="header__item">
+                        <a href="#article" class="header__link">
+                            Article
+                        </a>
+                    </li>
+                    <li class="header__item">
+                        <a href="#related" class="header__link">
+                            Related Articles
+                        </a>
+                    </li>
+                    <li class="header__item">
+                        <a href="#contact" class="header__link">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- Main -->
+    <main class="main">
+        <div class="main__container">
+            <!-- Article -->
+            <article id="article" class="article">
+                <header class="article__header">
+                    <h2 class="article__title">
+                        Understanding Semantic HTML
+                    </h2>
+                    <p class="article__info">
+                        Written by <strong>Koushik Maya</strong>
+                        <br>
+                        Published on
+                        <time datetime="2026-07-07">
+                            July 7, 2026
+                        </time>
+                    </p>
+                </header>
+                <!-- Introduction -->
+                <section class="article__section">
+                    <h3 class="article__heading">
+                        Introduction
+                    </h3>
+                    <p class="article__text">
+                        Semantic HTML uses meaningful elements to describe the
+                        purpose of web content. It improves accessibility,
+                        SEO and readability.
+                    </p>
+                </section>
+                <!-- Structure -->
+                <section class="article__section">
+                    <h3 class="article__heading">
+                        Semantic Structure
+                    </h3>
+                    <ol class="article__ordered-list">
+                        <li>Header</li>
+                        <li>Navigation</li>
+                        <li>Main</li>
+                        <li>Article</li>
+                        <li>Aside</li>
+                        <li>Footer</li>
+                    </ol>
+                    <figure class="article__figure">
+                        <img
+                            src="https://deen3evddmddt.cloudfront.net/uploads/content-images/html-layout.webp"
+                            alt="Semantic HTML Layout"
+                            class="article__image">
+                        <figcaption class="article__caption">
+                            Figure 1 : Semantic HTML Layout
+                        </figcaption>
+                    </figure>
+                </section>
+                <!-- Code -->
+                <section class="article__section">
+                    <h3 class="article__heading">
+                        Sample HTML Code
+                    </h3>
+<pre class="article__code">
+&lt;main&gt;
+    &lt;article&gt;
+        &lt;section&gt;
+            Content
+        &lt;/section&gt;
+    &lt;/article&gt;
+&lt;/main&gt;
+</pre>
+                </section>
+                <!-- Expert Opinion -->
+                <section class="article__section">
+                    <h3 class="article__heading">
+                        Expert Opinion
+                    </h3>
+                    <p class="article__text">
+                        Semantic HTML helps browsers,
+                        search engines and assistive technologies
+                        understand webpage content.
+                    </p>
+                </section>
+            </article>
+            <!-- Sidebar -->
+            <aside id="related" class="sidebar">
+                <h2 class="sidebar__title">
+                    Related Articles
+                </h2>
+                <ul class="sidebar__list">
+                    <li class="sidebar__item">
+                        <a href="https://www.w3schools.com/html/html_forms.asp"
+                            class="sidebar__link"
+                            target="_blank">
+                            HTML Forms
+                        </a>
+                    </li>
+                    <li class="sidebar__item">
+                        <a href="https://www.w3schools.com/html/html_accessibility.asp"
+                            class="sidebar__link"
+                            target="_blank">
+                            Accessibility Basics
+                        </a>
+                    </li>
+                    <li class="sidebar__item">
+                        <a href="https://www.geeksforgeeks.org/techtips/search-engine-optimization-seo-basics/"
+                            class="sidebar__link"
+                            target="_blank">
+                            SEO Fundamentals
+                        </a>
+                    </li>
+                </ul>
+            </aside>
+            <!-- Contact -->
+            <section id="contact" class="contact">
+                <h2 class="contact__title">
+                    Contact the Author
+                </h2>
+                <form class="contact__form">
+                    <label class="contact__label" for="name">
+                        Name
+                    </label>
+                    <input
+                        class="contact__input"
+                        type="text"
+                        id="name"
+                        required>
+                        <br>
+                        <br>
+                    <label class="contact__label" for="email">
+                        Email
+                    </label>
+                    
+                    <input
+                        class="contact__input"
+                        type="email"
+                        id="email"
+                        required>
+                        <br>
+                        <br>
+                    <label class="contact__label" for="message">
+                        Message
+                    </label>
+                    <textarea
+                        class="contact__textarea"
+                        id="message"
+                        rows="5"></textarea>
+                    <button
+                        class="contact__button"
+                        type="submit">
+                        Send Message
+                    </button>
+                </form>
+            </section>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer class="footer">
+        <p class="footer__text">
+            © 2026 Tech Insights
+        </p>
+        <address class="footer__address">
+            Contact :
+            <a
+                href="mailto:koushik@gmail.com" 
+                class="footer__link">
+                koushik@gmail.com
+            </a>
+        </address>
+    </footer>
+</body>
+</html>
