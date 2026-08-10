@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Layout Thrashing</title>
+
+    <style>
+        .box {
+            width: 200px;
+            height: 50px;
+            margin: 10px;
+            background: steelblue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button id="run">Run Test</button>
+<div id="container"></div>
+
+    <script>
+       
+   const container = document.getElementById("container");
+
+for (let i = 0; i < 100; i++) {
+    container.innerHTML += '<div class="box"></div>';
+}
+
+const boxes = document.querySelectorAll(".box");
+
+document.getElementById("run").onclick = function () {
+
+  
+  for (const box of boxes) {
+
+      console.log(box.offsetHeight);
+
+    }
+      for (const box of boxes) {
+
+        box.style.height = "100px";
+
+        
+
+    }
+    
+};
+    
+    </script>
+
+</body>
+</html>
