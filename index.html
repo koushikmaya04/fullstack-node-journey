@@ -3,32 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Progress</title>
+    <title>Learning Progress</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background: #f5f7fb;
+            color: #1f2937;
+        }
+
+        main {
+            width: min(900px, 92%);
+            margin: 40px auto;
+        }
+
+        header {
+            margin-bottom: 32px;
+        }
+
+        h1 {
+            margin: 0 0 8px;
+        }
+
+        .intro {
+            margin: 0;
+            color: #6b7280;
+        }
+
+        section {
+            background: #ffffff;
+            margin-bottom: 24px;
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+        }
+
+        h2 {
+            margin-top: 0;
+            border-bottom: 1px solid #e5e7eb;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            margin-bottom: 8px;
+        }
+
+        ul {
+            margin: 8px 0 20px;
+            padding-left: 24px;
+        }
+
+        li {
+            margin: 8px 0;
+        }
+
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .repo-link {
+            font-weight: 600;
+        }
+
+        .completed {
+            color: #15803d;
+            font-weight: 600;
+        }
+    </style>
 </head>
 <body>
-<h1>Week-01</h1>
-    <ul>
-        <li><a href="https://statuesque-unicorn-dd17dc.netlify.app/">HTML Foundations</a></li>
-         <li> <a href="week-01/css-foundations/01-box-model/ind.html">CSS Foundations - Box Model Debugging - Broken</a></li>
-         <li> <a href="https://css-boxmode.netlify.app/">CSS Foundations - Box Model Debugging - Corrected</a></li>
-        <li> <a href="https://cascading-specificity.netlify.app/">CSS Foundations -Cascade and Specificity</a></li>
-</ul>
-<h1>Week-02</h1>
-<ul>
-        <li> <a href="week-02/task-01-layout-comparison/float-layout/index.html" >Example holy grain layout using float</a></li>
-         <li><a href="week-02/task-01-layout-comparison/flexbox-layout/index.html">Example holy grain layout using flex-box</a></li>
-        <li><a href="week-02/task-01-layout-comparison/grid-layout/index.html">Example holy grain layout using grid</a></li>
-        <li><a href="week-02/task-02-card-gallery/index.html">Responsive Card Gallery Using CSS Grid</a></li>
-       <li><a href="week-02/task-03-responsive-design/index.html">Css Architecture</a></li>
-     <li><a href="week-02/task-04-layout-thrashing/LayoutThrashing.html">Layout Trashing</a></li>
-    <li><a href="week-02/task-04-layout-thrashing/fixed.html">Fixed Version</a></li>
-</ul>
-    <h1>Week-03</h1>
-      <li> <a href="https://github.com/koushikmaya04/fullstack-node-journey/tree/main/week-03" >Repo Link </a></li>
-      <!-- <li> <a href="week-02/task-01-layout-comparison/float-layout/index.html" >Example holy grain layout using float</a></li> -->
-<ul>
-     
-</ul>
+    <main>
+        <header>
+            <h1>Learning Progress</h1>
+            <p class="intro">My full-stack development learning journey and completed tasks.</p>
+        </header>
 
+        <section>
+            <h2>Week-01</h2>
+            <ul>
+                <li><a href="https://statuesque-unicorn-dd17dc.netlify.app/">HTML Foundations</a></li>
+                <li><a href="week-01/css-foundations/01-box-model/ind.html">CSS Foundations - Box Model Debugging - Broken</a></li>
+                <li><a href="https://css-boxmode.netlify.app/">CSS Foundations - Box Model Debugging - Corrected</a></li>
+                <li><a href="https://cascading-specificity.netlify.app/">CSS Foundations - Cascade and Specificity</a></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Week-02</h2>
+            <ul>
+                <li><a href="week-02/task-01-layout-comparison/float-layout/index.html">Example holy grain layout using float</a></li>
+                <li><a href="week-02/task-01-layout-comparison/flexbox-layout/index.html">Example holy grain layout using flex-box</a></li>
+                <li><a href="week-02/task-01-layout-comparison/grid-layout/index.html">Example holy grain layout using grid</a></li>
+                <li><a href="week-02/task-02-card-gallery/index.html">Responsive Card Gallery Using CSS Grid</a></li>
+                <li><a href="week-02/task-03-responsive-design/index.html">Css Architecture</a></li>
+                <li><a href="week-02/task-04-layout-thrashing/LayoutThrashing.html">Layout Trashing</a></li>
+                <li><a href="week-02/task-04-layout-thrashing/fixed.html">Fixed Version</a></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Week-03</h2>
+            <p>
+                <a class="repo-link" href="https://github.com/koushikmaya04/fullstack-node-journey/tree/main/week-03">Week-03 Repository</a>
+            </p>
+
+            <h3>Subtask-01</h3>
+            <ul>
+                <li>Custom Function.prototype call, apply, and bind implementations</li>
+                <li>Closure-based counter and private-state module pattern</li>
+                <li>var vs let scoping bugs and fixes</li>
+            </ul>
+
+            <h3>Subtask-02 <span class="completed">✓ Completed</span></h3>
+            <ul>
+                <li>Scripts mixing synchronous code, Promise.resolve().then(), and setTimeout()</li>
+                <li>Predicting execution order before running the scripts</li>
+                <li>Microtask vs macrotask ordering explanation</li>
+                <li>Event loop ordering diagram and short write-up</li>
+            </ul>
+        </section>
+    </main>
 </body>
 </html>
