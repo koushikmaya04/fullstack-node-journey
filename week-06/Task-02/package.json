@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "scripts": {
+    "test": "jest --coverage",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/jest": "latest",
+    "@types/node": "latest",
+    "jest": "latest",
+    "ts-jest": "latest",
+    "typescript": "latest"
+  }
+}

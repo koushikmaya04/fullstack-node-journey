@@ -1,54 +1,79 @@
-# Week 06 - Task 02: Strategy and Adapter Patterns
+# Week 06 - Task 02: TypeScript Basics, Testing & Git Workflow
 
 ## Objective
 
-Practice two useful JavaScript design patterns by building small, real-world examples:
+Convert selected JavaScript exercises from earlier weeks into TypeScript and add Jest unit tests.
 
-- Strategy Pattern
-- Adapter Pattern
+This task follows the original Week 06 learning path:
 
-## 1. Strategy Pattern
+- TypeScript basic types
+- Interfaces
+- Generics
+- Jest fundamentals (`describe`, `it`, `expect`, mocks)
+- Feature branches and Pull Requests
+- Code review etiquette
 
-The Strategy pattern allows an object to switch between different algorithms or behaviours without changing the main object.
+## Practical Exercise
 
-In this exercise, `Checkout` can use different discount strategies:
+The following earlier implementations are converted into TypeScript:
 
-- `NoDiscount`
-- `PercentageDiscount`
-- `FlatDiscount`
+1. **Custom Promise** from Week 05 - Task 01
+2. **Mini EventEmitter** from Week 06 - Task 01
+3. **Notification Factory** from Week 06 - Task 01
 
-The checkout code does not need to know how each discount is calculated.
+The TypeScript versions introduce explicit types, interfaces, generics, discriminated unions, and typed event maps.
 
-## 2. Adapter Pattern
-
-The Adapter pattern allows incompatible interfaces to work together.
-
-Here, the application expects:
-
-`pay(amountInRupees)`
-
-but the old payment gateway expects:
-
-`makePayment(amountInPaise)`
-
-`PaymentAdapter` converts the new interface into the format expected by the legacy gateway.
+Jest tests cover the Custom Promise and EventEmitter behaviour. The Jest configuration enforces a minimum of 80% global coverage across branches, functions, lines, and statements.
 
 ## Files
 
-- `discount-strategies.js` - Strategy pattern implementation
-- `payment-adapter.js` - Adapter pattern implementation
-- `test.js` - Tests using Node.js built-in assertions
+- `custom-promise.ts` - typed version of the Week 05 CustomPromise implementation
+- `mini-event-emitter.ts` - generic, typed EventEmitter implementation
+- `notification-factory.ts` - typed notification interface and factory
+- `custom-promise.test.ts` - Jest tests for CustomPromise
+- `mini-event-emitter.test.ts` - Jest tests for MiniEventEmitter
+- `tsconfig.json` - strict TypeScript configuration
+- `jest.config.cjs` - Jest + coverage configuration
+- `package.json` - test and type-check scripts
 
 ## Run
 
-From the repository root:
-
 ```bash
-node week-06/Task-02/test.js
+npm install
+npm run typecheck
+npm test
 ```
 
-Expected output:
+The test command is configured to fail if global branch, function, line, or statement coverage falls below 80%.
+
+## Git Workflow
+
+The intended branch for this task is:
 
 ```text
-Week 06 Task 02: all tests passed.
+week-06-js-typescript-basics-testing-git-workflow
 ```
+
+Workflow:
+
+```text
+main
+  ↓
+feature branch
+  ↓
+commits
+  ↓
+Pull Request
+  ↓
+mentor/code review
+  ↓
+requested fixes
+  ↓
+squash merge
+  ↓
+main
+```
+
+## Learning Outcome
+
+The goal is to connect TypeScript type safety with automated testing and a professional Git workflow. The task demonstrates that a feature should be typed, tested, reviewable, and safely integrated.
