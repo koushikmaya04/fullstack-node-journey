@@ -2,8 +2,12 @@ import { BadRequestException, Injectable, PipeTransform } from '@nestjs/common';
 import { TaskStatus } from '../task-status';
 
 @Injectable()
-export class ParseTaskStatusPipe implements PipeTransform<string, TaskStatus> {
-  transform(value: string): TaskStatus {
+export class ParseTaskStatusPipe implements PipeTransform<string | undefined, TaskStatus | undefined> {
+  transform(value: string | undefined): TaskStatus | undefined {
+    if (value === undefined) {
+      return undefined;
+    }
+
     const allowedStatuses = Object.values(TaskStatus);
 
     if (!allowedStatuses.includes(value as TaskStatus)) {
