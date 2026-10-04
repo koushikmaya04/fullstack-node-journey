@@ -1,0 +1,7 @@
+INFO Server started
+WARN Slow response from /api/users
+ERROR Database connection failed
+INFO Retrying database connection
+WARN Cache miss for user 42
+ERROR Request failed with status 500
+INFO Server recovered
