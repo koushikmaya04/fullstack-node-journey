@@ -1,72 +1,65 @@
-#!/usr/bin/env node
 
-const fs = require('node:fs');
-const path = require('node:path');
-const os = require('node:os');
-const { EventEmitter } = require('node:events');
-const readline = require('node:readline');
+const fs = require("node:fs");
+const path = require("node:path");
+const os = require("node:os");
 
-const LEVELS = Object.freeze(['ERROR', 'WARN', 'INFO']);
+function analyzeLog(filePath) {
+  const content = fs.readFileSync(filePath, "utf8");
+  const lines = content.split(/\r?\n/);
 
-function createAnalyzer() {
-  const emitter = new EventEmitter();
-  const counts = { ERROR: 0, WARN: 0, INFO: 0, TOTAL: 0 };
+  const counts = {
+    ERROR: 0,
+    WARN: 0,
+    INFO: 0,
+    TOTAL: lines.length,
+  };
 
-  function processLine(line) {
-    counts.TOTAL += 1;
+  for (const line of lines) {
     const match = line.match(/^\s*(ERROR|WARN|INFO)\b/i);
-    if (match) counts[match[1].toUpperCase()] += 1;
+
+    if (match) {
+      counts[match[1].toUpperCase()]++;
+    }
   }
 
-  function analyze(filePath) {
-    return new Promise((resolve, reject) => {
-      const stream = fs.createReadStream(filePath, { encoding: 'utf8' });
-      stream.on('error', reject);
-      const rl = readline.createInterface({ input: stream, crlfDelay: Infinity });
-      rl.on('line', processLine);
-      rl.on('close', () => {
-        const result = Object.freeze({ ...counts });
-        emitter.emit('complete', result);
-        resolve(result);
-      });
-    });
-  }
-
-  return { analyze, on: (...args) => emitter.on(...args) };
+  return counts;
 }
 
 function formatReport(filePath, counts) {
-  return [
-    'Log analysis: ' + path.basename(filePath),
-    'Platform: ' + os.platform(),
-    'CPU cores: ' + os.cpus().length,
-    'ERROR: ' + counts.ERROR,
-    'WARN: ' + counts.WARN,
-    'INFO: ' + counts.INFO,
-    'TOTAL: ' + counts.TOTAL,
-  ].join('\n');
+  return `
+Log analysis: ${path.basename(filePath)}
+Platform: ${os.platform()}
+CPU cores: ${os.cpus().length}
+ERROR: ${counts.ERROR}
+WARN: ${counts.WARN}
+INFO: ${counts.INFO}
+TOTAL: ${counts.TOTAL}
+`;
 }
 
-async function main() {
+function main() {
   const input = process.argv[2];
+
   if (!input) {
-    console.error('Usage: node analyzer.js <log-file>');
+    console.error("Usage: node analyzer.js <log-file>");
     process.exitCode = 1;
     return;
   }
 
-  const filePath = path.resolve(process.cwd(), input);
-  const analyzer = createAnalyzer();
-  analyzer.on('complete', (counts) => console.log(formatReport(filePath, counts)));
+  const filePath = path.resolve(input);
 
   try {
-    await analyzer.analyze(filePath);
+    const counts = analyzeLog(filePath);
+    console.log(formatReport(filePath, counts));
   } catch (error) {
-    console.error('Unable to analyze ' + filePath + ': ' + error.message);
+    console.error("Unable to analyze file:", error.message);
     process.exitCode = 1;
   }
 }
 
-if (require.main === module) main();
+main();
 
-module.exports = { createAnalyzer, formatReport, LEVELS };
+module.exports = {
+  analyzeLog,
+  formatReport,
+};
