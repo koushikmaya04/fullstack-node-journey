@@ -13,7 +13,7 @@ Week 10, Task 2 is a separate runnable project based on Task 1. Task 1 remains u
 - DTO validation via class-validator and global ValidationPipe.
 
 ## Setup
-Create a PostgreSQL database, then run:
+Create a separate PostgreSQL database named `tasks_auth_db` (do not reuse Task 1's `tasks_db`), then run:
 ```bash
 npm install
 cp .env.example .env
