@@ -36,7 +36,15 @@ describe('TasksService', () => {
 
   it('delegates task creation to the repository abstraction', async () => {
     const input = { title: 'Learn NestJS', userId: 1 };
-    const created = { id: 1, ...input, completed: false } as TaskEntity;
+    const created = {
+      id: 1,
+      ...input,
+      description: null,
+      completed: false,
+      user: {} as TaskEntity['user'],
+      createdAt: new Date(),
+      updatedAt: new Date(),
+    } as TaskEntity;
     repository.create.mockResolvedValue(created);
 
     await expect(service.create(input)).resolves.toBe(created);
